@@ -1,4 +1,5 @@
 import Card from "./Card";
+import OuterCard from "./OuterCard";
 import ModalProvider from "./ModalProvider";
 import PageContainer from "./PageContainer";
 import {
@@ -16,4 +17,5 @@ export {
   IconActionBtn,
   OutlinedActionBtn,
   TextActionLink,
+  OuterCard,
 };
