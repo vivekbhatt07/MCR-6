@@ -2,7 +2,7 @@ import React from "react";
 
 const ReviewCard = (props) => {
   const { rating, comment, revName, pp } = props;
-  const ratingList = ["✰✰✰✰", "✰✰✰", "✰✰"];
+  const ratingList = ["★✰✰✰✰", "★★✰✰✰", "★★★✰✰", "★★★★✰", "★★★★★"];
   return (
     <div className="flex justify-between items-center px-3 py-2 border border-stone-400 rounded-md">
       <div className="flex flex-col gap-3">
@@ -16,8 +16,10 @@ const ReviewCard = (props) => {
         {/* Description */}
         <p className="text-sm text-stone-500 font-normal">{comment}</p>
       </div>
-      <span className="w-[30px] h-[30px] rounded-full bg-stone-800 flex justify-center items-center text-stone-50">
-        {rating}
+      <span className="flex">
+        {ratingList.find((currentRating, ratingIndex) => {
+          return ratingIndex + 1 == rating;
+        })}
       </span>
     </div>
   );
