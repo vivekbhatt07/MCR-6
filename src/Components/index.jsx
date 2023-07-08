@@ -9,6 +9,8 @@ import {
   OutlinedActionBtn,
   TextActionLink,
 } from "./Actions";
+import TextInputLabel from "./TextInputLabel";
+import TextInput from "./TextInput";
 
 export {
   Card,
@@ -20,4 +22,6 @@ export {
   TextActionLink,
   OuterCard,
   ReviewCard,
+  TextInputLabel,
+  TextInput,
 };

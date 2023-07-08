@@ -7,7 +7,6 @@ const TextInput = (props) => {
     inputValue,
     inputPlaceholder,
     inputHandle,
-    isValid,
     className,
     TextInputStyles,
   } = props;
@@ -22,7 +21,6 @@ const TextInput = (props) => {
       value={inputValue}
       placeholder={inputPlaceholder}
       onChange={inputHandle}
-      aria-invalid={!isValid}
       className={classes}
       style={{ ...TextInputStyles }}
       required

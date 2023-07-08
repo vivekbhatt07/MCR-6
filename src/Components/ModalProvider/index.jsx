@@ -16,7 +16,7 @@ const ModalProvider = (props) => {
               handleClick={() => closeModal()}
               className="text-stone-950 hover:text-stone-950"
             >
-              <CloseIcon className="dark:text-stone-50" />
+              <CloseIcon className="text-stone-900" />
             </IconActionBtn>
           </div>
           <div className="bg-stone-50 rounded-md overflow-hidden">
