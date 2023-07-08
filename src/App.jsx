@@ -2,10 +2,11 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Landing, Detail } from "./Pages";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
-    <div className="bg-stone-700">
+    <>
       <ToastContainer
         position="top-right"
         // autoClose={false}
@@ -17,11 +18,13 @@ const App = () => {
         draggable
         autoClose={5000}
       />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/restaurantList/:restaurantId" element={<Detail />} />
-      </Routes>
-    </div>
+      <div className="bg-stone-700">
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/restaurantList/:restaurantId" element={<Detail />} />
+        </Routes>
+      </div>
+    </>
   );
 };
 

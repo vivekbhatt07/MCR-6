@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ToastHandler from "../../Utility/ToastHandler";
 import {
   ContainedActionBtn,
   IconActionBtn,
@@ -61,6 +62,7 @@ const Detail = () => {
       reviewRating: "",
       reviewComment: "",
     });
+    ToastHandler("success", "Review Added");
     closeReviewModal();
   };
 
@@ -125,8 +127,9 @@ const Detail = () => {
                   onChange={reviewDatahandler}
                   value={reviewData.reviewRating}
                   defaultValue="none"
+                  required
                 >
-                  <option value="none">Select Rating</option>
+                  <option value="">Select Rating</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
