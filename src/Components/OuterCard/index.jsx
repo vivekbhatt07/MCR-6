@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "../Card";
 
 const OuterCard = (props) => {
@@ -9,7 +10,9 @@ const OuterCard = (props) => {
         {props.menu.map((currentMenu, menuIndex) => {
           return (
             <li key={menuIndex}>
-              <Card {...currentMenu} restaurantName={props.name} />
+              <Link to={`/restaurantList/${props.id}`}>
+                <Card {...currentMenu} restaurantName={props.name} />
+              </Link>
             </li>
           );
         })}

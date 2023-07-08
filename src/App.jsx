@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Landing } from "./Pages";
+import { Landing, Detail } from "./Pages";
 import { ToastContainer } from "react-toastify";
 
 const App = () => {
@@ -19,6 +19,7 @@ const App = () => {
       />
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/restaurantList/:restaurantId" element={<Detail />} />
       </Routes>
     </div>
   );

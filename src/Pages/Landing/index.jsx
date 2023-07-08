@@ -25,10 +25,8 @@ const Landing = () => {
                     setCurrentCuisine(activeCuisine.id);
                   }}
                   btnStyle={{
-                    outline:
-                      activeCuisine.id == currentCuisine.name
-                        ? "2px solid red"
-                        : "2px solid transparent",
+                    backgroundColor:
+                      activeCuisine.id == currentCuisine && "orange",
                   }}
                 >
                   {activeCuisine.name}

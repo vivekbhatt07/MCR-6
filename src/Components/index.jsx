@@ -2,6 +2,7 @@ import Card from "./Card";
 import OuterCard from "./OuterCard";
 import ModalProvider from "./ModalProvider";
 import PageContainer from "./PageContainer";
+import ReviewCard from "./ReviewCard";
 import {
   ContainedActionBtn,
   IconActionBtn,
@@ -18,4 +19,5 @@ export {
   OutlinedActionBtn,
   TextActionLink,
   OuterCard,
+  ReviewCard,
 };
