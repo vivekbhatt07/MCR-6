@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ContainedActionBtn, OuterCard, PageContainer } from "../../Components";
 import { useData } from "../../Context/DataContext";
+import FoodLottie from "../../assets/FoodLottie";
 
 const Landing = () => {
   const {
@@ -36,6 +37,7 @@ const Landing = () => {
           })}
         </ul>
         <ul className="flex flex-col gap-6">
+          {filteredRestaurantList.length == 0 && <FoodLottie />}
           {filteredRestaurantList.map((currentRestaurant) => {
             return (
               <OuterCard key={currentRestaurant.id} {...currentRestaurant} />
